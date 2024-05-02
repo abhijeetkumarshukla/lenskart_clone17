@@ -27,12 +27,12 @@ const Cart = () => {
   },[])
   return (
     <>
-     
+     {cart.length===0? null:<Navbar/> }
+      
       {cart.length ? (
         cart.map((elem) => (
          
-          <Box key={elem.id} p={5}>
-              <Navbar/>
+          <Box key={elem.id} >
             <Divider mb={10} bg={"grey"} h={0.8} />
             <Flex w={"70%"} m={"auto"} justifyContent={"space-between"}>
               <Flex justifyContent={"space-between"}>

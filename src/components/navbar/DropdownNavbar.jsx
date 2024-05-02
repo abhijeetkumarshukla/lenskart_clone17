@@ -14,8 +14,74 @@ import {
   } from "@chakra-ui/react";
   import { NavLink } from "react-router-dom";
   import { AiOutlineRight } from "react-icons/ai";
+import { useState } from "react";
   
   const DropdownNavbar = () => {
+
+    const [hoverOne,setHoverOne] = useState(false);
+    const [hoverTwo,setHoverTwo] = useState(false);
+    const [hoverThree,setHoverThree] = useState(false);
+    const [hoverFour,setHoverFour] = useState(false);
+    const [hoverFive,setHoverFive] = useState(false);
+    const [hoverSix,setHoverSix] = useState(false);
+    const [hoverSeven,setHoverSeven] = useState(false);
+
+    const isHoverOneTrue = ()=>{
+      setHoverOne(true);
+    }
+   const isHoverOneFalse = ()=>{
+      setHoverOne(false);
+    }
+
+    
+    const isHoverTwoTrue = ()=>{
+      setHoverTwo(true);
+    }
+   const isHoverTwoFalse = ()=>{
+      setHoverTwo(false);
+    }
+
+
+    const isHoverThreeTrue = ()=>{
+      setHoverThree(true);
+    }
+   const isHoverThreeFalse = ()=>{
+      setHoverThree(false);
+    }
+
+
+    const isHoverFourTrue = ()=>{
+      setHoverFour(true);
+    }
+   const isHoverFourFalse = ()=>{
+      setHoverFour(false);
+    }
+
+
+    const isHoverFiveTrue = ()=>{
+      setHoverFive(true);
+    }
+   const isHoverFiveFalse = ()=>{
+      setHoverFive(false);
+    }
+
+
+
+    const isHoverSixTrue = ()=>{
+      setHoverSix(true);
+    }
+   const isHoverSixFalse = ()=>{
+      setHoverSix(false);
+    }
+
+
+    const isHoverSevenTrue = ()=>{
+      setHoverSeven(true);
+    }
+   const isHoverSevenFalse = ()=>{
+      setHoverSeven(false);
+    }
+
     return (
       <Flex bg={'#FBF9F7'}
       
@@ -23,20 +89,23 @@ import {
       zIndex={2}>
         <Flex gap={1} bg={'#FBF9F7'}>
           {/*01 - EYEGLASSES */}
-          <Popover>
+          <Popover isOpen={hoverOne} onClose={() => setHoverOne(false)} onOpen={() => setHoverOne(true)}>
             <PopoverTrigger>
               <Button
+              onMouseEnter={isHoverOneTrue}
+              onMouseLeave={isHoverOneFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
                 bg={'#FBF9F7'}
                 _hover={{ borderBottom: "2px solid blue" }}
                 borderRadius={"none"}
+                
               >
                 EYEGLASSES
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1300px"}>
+            <PopoverContent w={"1300px"} onMouseEnter={isHoverOneTrue}  onMouseLeave={isHoverOneFalse}>
               <PopoverBody>
                 <SimpleGrid
                   gridTemplateColumns={"repeat(2,1fr)"}
@@ -408,9 +477,11 @@ import {
   
           {/* 02 COMPUTER GLASSES */}
   
-          <Popover>
+          <Popover isOpen={hoverTwo} onClose={() => setHoverTwo(false)} onOpen={() => setHoverTwo(true)} >
             <PopoverTrigger>
               <Button
+                onMouseEnter={isHoverTwoTrue}
+                onMouseLeave={isHoverTwoFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -422,7 +493,7 @@ import {
                 COMPUTER GLASSES
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1100px"}>
+            <PopoverContent w={"1100px"} onMouseEnter={isHoverTwoTrue}  onMouseLeave={isHoverTwoFalse}>
               <PopoverBody>
                 <SimpleGrid
                   gridTemplateColumns={"repeat(2,1fr)"}
@@ -526,9 +597,11 @@ import {
   
           {/* 03 KIDS GLASSES */}
             
-          <Popover>
+          <Popover isOpen={hoverThree} onClose={() => setHoverThree(false)} onOpen={() => setHoverThree(true)}>
             <PopoverTrigger>
               <Button
+               onMouseEnter={isHoverThreeTrue}
+               onMouseLeave={isHoverThreeFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -539,7 +612,7 @@ import {
                 KIDS GLASSES
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1200px"} h={"400px"}>
+            <PopoverContent w={"1200px"} h={"400px"} onMouseEnter={isHoverThreeTrue}  onMouseLeave={isHoverThreeFalse}>
               <PopoverBody>
   
                 <Flex gap={40} justifyContent={"center"} mt={57} ml={70}>
@@ -574,9 +647,11 @@ import {
   
           {/*04 CONTACT LENSES*/}
   
-          <Popover>
+          <Popover isOpen={hoverFour} onClose={() => setHoverFour(false)} onOpen={() => setHoverFour(true)}>
             <PopoverTrigger>
               <Button
+               onMouseEnter={isHoverFourTrue}
+               onMouseLeave={isHoverFourFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -588,7 +663,7 @@ import {
                 CONTACT LENSES
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1200px"} h={"400px"}>
+            <PopoverContent w={"1200px"} h={"400px"} onMouseEnter={isHoverFourTrue}  onMouseLeave={isHoverFourFalse}>
               <PopoverBody>
                 <Flex justifyContent={"space-around"}>
                   {/*  Brands */}
@@ -842,9 +917,11 @@ import {
   
           {/*05 SUNGLASSES */}
   
-          <Popover>
+          <Popover isOpen={hoverFive} onClose={() => setHoverFive(false)} onOpen={() => setHoverFive(true)}>
             <PopoverTrigger>
               <Button
+              onMouseEnter={isHoverFiveTrue}
+              onMouseLeave={isHoverFiveFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -856,7 +933,7 @@ import {
                 SUNGLASSES
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1200px"} h={"400px"}>
+            <PopoverContent w={"1200px"} h={"400px"} onMouseEnter={isHoverFiveTrue}  onMouseLeave={isHoverFiveFalse}>
               <PopoverBody>
                 <Flex gap={10}>
                   <SimpleGrid gap={3}>
@@ -1068,9 +1145,11 @@ import {
   
           {/* 06 HOME EYE-TEST */}
   
-          <Popover>
+          <Popover isOpen={hoverSix} onClose={() => setHoverSix(false)} onOpen={() => setHoverSix(true)}>
             <PopoverTrigger>
               <Button
+              onMouseEnter={isHoverSixTrue}
+              onMouseLeave={isHoverSixFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -1082,7 +1161,7 @@ import {
                 HOME EYE-TEST
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1200px"} h={"400px"}>
+            <PopoverContent w={"1200px"} h={"400px"} onMouseEnter={isHoverSixTrue}  onMouseLeave={isHoverSixFalse}>
               <PopoverBody>
                 <Flex>
                   <Box>
@@ -1145,9 +1224,11 @@ import {
   
           {/* 07 STORE LOCATOR */}
   
-          <Popover>
+          <Popover isOpen={hoverSeven} onClose={() => setHoverSeven(false)} onOpen={() => setHoverSeven(true)}>
             <PopoverTrigger>
               <Button
+              onMouseEnter={isHoverSevenTrue}
+              onMouseLeave={isHoverSevenFalse}
                 pt={"5"}
                 pr={"1"}
                 pb={5}
@@ -1159,7 +1240,7 @@ import {
                 STORE LOCATOR
               </Button>
             </PopoverTrigger>
-            <PopoverContent w={"1200px"} h={"400px"}>
+            <PopoverContent w={"1200px"} h={"400px"} onMouseEnter={isHoverSevenTrue}  onMouseLeave={isHoverSevenFalse}>
               <PopoverBody>
                 <Flex>
                   <Box>

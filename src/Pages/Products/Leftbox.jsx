@@ -1,4 +1,4 @@
-import { TbArrowsUpDown } from "react-icons/tb";
+ 
 import FrameType from "./FrameType";
 import {
   Accordion,
@@ -7,40 +7,26 @@ import {
     AccordionItem,
     AccordionPanel,
     Box,
-     
     Checkbox,
     Flex,
     Grid,
-    GridItem,
-    Select,
-    SimpleGrid,
-    Switch,
-     
+    GridItem,  
+    SimpleGrid, 
     Text,
-    VStack,
+   
   } from "@chakra-ui/react";
-//   import { TbArrowsUpDown } from "react-icons/tb";
-//   import ProductTemplate from "./ProductTemplate";
+ 
    import  { useEffect, useState } from "react";
      import axios from "axios";
 import ProductTemplate from "./ProductTemplate";
-//   import LodingState from "./LodingState";
-//   import TopNav from "../Navbar/TopNav";
+ 
   
   const ProductList = () => {
     const [products , setProducts]=useState([])
     const [isLoding , setIsLoding]=useState(false)
     const [filters , setfilters]=useState([])
     const [page , setPage]=useState(1)
-    // const handleFilter =()=>{
-      
-    // }
-  
-    // let loader=[1,2,3,4,5,6]
-    
-    // const addSorttoUrl=(e)=>{
      
-    // }
     const fetchproduct=()=>{
       setIsLoding(true)
       axios(`https://easy-pink-bull-shoe.cyclic.app/Products?_page=${page}&_limit=9`)
