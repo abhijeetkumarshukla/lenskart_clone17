@@ -3,7 +3,7 @@
  This project is a clone of the Lenskart website, a popular online platform for buying eyewear. It is built using javaScript, React.js, React Router,Contaxt Api, and Chakra UI to replicate the key features and functionalities of the Lenskart website for learning and practice purposes.
 
 ## Experience It Yourself 🔗
-- [Lenskart Clone](https://lenskartclone17.netlify.app/ )
+- [Lenskart Clone](https://lenskart-clone17.netlify.app/)
 
 ## About Lenskart 🏪
  Lenskart is one of India's leading eyewear brands, primarily operating in the online retail space. Founded in 2010 by Peyush Bansal, Lenskart aimed to disrupt the traditional eyewear retail market by offering a convenient and accessible platform for purchasing eyewear products.
