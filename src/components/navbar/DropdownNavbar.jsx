@@ -1432,41 +1432,7 @@ import { useState } from "react";
 
 
 
-        {/* <SimpleGrid gridTemplateRows={'repeat(1,1fr)'} gap={6} m={'auto'}   display={['block','block','none', 'none']}    mt={1}  >
-          <NavLink>
-            {" "}
-            <Image
-            display={['block','block','none', 'none']}
-              h="37px"
-              w="120px"
-              borderRadius="5px"
-              src=" https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png"
-              alt="TRY ON 3D"
-            />
-          </NavLink>
-          <NavLink>
-            {" "}
-            <Image
-             display={['block','block','none', 'none']}
-              h="37px"
-              w="120px"
-              borderRadius="5px"
-              src="https://static1.lenskart.com/media/desktop/img/Mar22/13-Mar/blulogo.png"
-              alt="BLU"
-            />
-          </NavLink>
-          <NavLink>
-            {" "}
-            <Image
-            display={['block','block','none', 'none']}
-              h="37px"
-              w="120px"
-              borderRadius="5px"
-              src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg"
-              alt="GOLD"
-            />
-          </NavLink>
-        </SimpleGrid> */}
+        
       </Flex>
     );
   };
