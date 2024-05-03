@@ -84,10 +84,10 @@ import { useState } from "react";
 
     return (
       <Flex bg={'#FBF9F7'}
-      
-      position={'relative'}
+       justifyContent={'space-between'}
+        
       zIndex={2}>
-        <Flex gap={1} bg={'#FBF9F7'}>
+        <Flex gap={1} bg={'#FBF9F7'} display={['none','none','block', 'block']} >
           {/*01 - EYEGLASSES */}
           <Popover isOpen={hoverOne} onClose={() => setHoverOne(false)} onOpen={() => setHoverOne(true)}>
             <PopoverTrigger>
@@ -1396,12 +1396,49 @@ import { useState } from "react";
         </Flex>
   
         {/* img section */}
-        <Flex gap={2} justifyContent={"end"} mr={20} mt={2}>
+        <Flex gap={2}       mt={1}  >
+          
+            <Image
+            display={['none','none','block', 'block']}
+              h="37px"
+              w="100px"
+              borderRadius="5px"
+              src=" https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png"
+              alt="TRY ON 3D"
+            />
+          
+          
+            <Image
+            display={['none','none','block', 'block']}
+              h="37px"
+              w="100px"
+              borderRadius="5px"
+              src="https://static1.lenskart.com/media/desktop/img/Mar22/13-Mar/blulogo.png"
+              alt="BLU"
+            />
+          
+          
+            <Image
+            display={['none','none','block', 'block']}
+              h="37px"
+              w="100px"
+              borderRadius="5px"
+              src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg"
+              alt="GOLD"
+            />
+           
+        </Flex>
+
+
+
+
+        {/* <SimpleGrid gridTemplateRows={'repeat(1,1fr)'} gap={6} m={'auto'}   display={['block','block','none', 'none']}    mt={1}  >
           <NavLink>
             {" "}
             <Image
-              h="45%"
-              w="100%"
+            display={['block','block','none', 'none']}
+              h="37px"
+              w="120px"
               borderRadius="5px"
               src=" https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png"
               alt="TRY ON 3D"
@@ -1410,8 +1447,9 @@ import { useState } from "react";
           <NavLink>
             {" "}
             <Image
-              h="45%"
-              w="100%"
+             display={['block','block','none', 'none']}
+              h="37px"
+              w="120px"
               borderRadius="5px"
               src="https://static1.lenskart.com/media/desktop/img/Mar22/13-Mar/blulogo.png"
               alt="BLU"
@@ -1420,14 +1458,15 @@ import { useState } from "react";
           <NavLink>
             {" "}
             <Image
-              h="45%"
-              w="100%"
+            display={['block','block','none', 'none']}
+              h="37px"
+              w="120px"
               borderRadius="5px"
               src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg"
               alt="GOLD"
             />
           </NavLink>
-        </Flex>
+        </SimpleGrid> */}
       </Flex>
     );
   };
